@@ -7,7 +7,7 @@ public class ATest
     [Fact(DisplayName = "The result is correct with a simple data set [7, 5, 9, 1, 4]")]
     public void Should_Find_Closest_To_Zero()
     {
-        var ints = new[] { 7, 5, 9, 1, 4 };
+        int[] ints = [7, 5, 9, 1, 4];
 
         var result = A.ClosestToZero(ints);
 
@@ -17,23 +17,23 @@ public class ATest
     [Fact(DisplayName = "The solution works with 2147483647 or -2147483647")]
     public void Should_Find_Closest_To_Zero_When_Min_And_Max_Integers()
     {
-        var ints1 = new[] { 7, int.MinValue, 9, 1, 4 };
+        int[] ints1 = [7, int.MinValue, 9, 1, 4];
         var result1 = A.ClosestToZero(ints1);
         Check.That(result1).IsEqualTo(1);
 
-        var ints2 = new[] { 7, 5, 9, int.MaxValue, 4 };
+        int[] ints2 = [7, 5, 9, int.MaxValue, 4];
         var result2 = A.ClosestToZero(ints2);
         Check.That(result2).IsEqualTo(4);
 
-        var ints3 = new[] { int.MinValue, 1, 9, int.MaxValue, 5 };
+        int[] ints3 = [int.MinValue, 1, 9, int.MaxValue, 5];
         var result3 = A.ClosestToZero(ints3);
         Check.That(result3).IsEqualTo(1);
 
-        var ints4 = new[] { int.MinValue, int.MaxValue };
+        int[] ints4 = [int.MinValue, int.MaxValue];
         var result4 = A.ClosestToZero(ints4);
         Check.That(result4).IsEqualTo(int.MaxValue);
-        
-        var ints5 = new[] { int.MinValue, int.MinValue };
+
+        int[] ints5 = [int.MinValue, int.MinValue];
         var result5 = A.ClosestToZero(ints5);
         Check.That(result5).IsEqualTo(int.MinValue);
     }
@@ -41,7 +41,7 @@ public class ATest
     [Fact(DisplayName = "The solution works when the array contains only negative integers")]
     public void Should_Find_Closest_To_Zero_When_Only_Negative_Intergers()
     {
-        var ints = new[] { -7, -3, -9, -4 };
+        int[] ints = [-7, -3, -9, -4];
 
         var result = A.ClosestToZero(ints);
 
@@ -51,7 +51,7 @@ public class ATest
     [Fact(DisplayName = "When two integers are as close to 0, then the positive wins")]
     public void Should_Find_Closest_To_Zero_When_2_Integers_Are_Close_To_0()
     {
-        var ints = new[] { 7, -3, 9, 3, 4 };
+        int[] ints = [7, -3, 9, 3, 4];
 
         var result = A.ClosestToZero(ints);
 
@@ -61,7 +61,7 @@ public class ATest
     [Fact(DisplayName = "The solution works when the array contains only two equal negative integers")]
     public void Should_Find_Closest_To_Zero_When_Same_2_Negative_Integers()
     {
-        var ints = new[] { 6, -2, 3, -2, 9 };
+        int[] ints = [6, -2, 3, -2, 9];
 
         var result = A.ClosestToZero(ints);
 

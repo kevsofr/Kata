@@ -121,7 +121,7 @@ public class AnswerTest
 
     
     [Fact(DisplayName = "Gets the expected result using a long string (in time and without a stack overflow)")]
-    public void Should_()
+    public void Should_Return_False_When_Invalid_Long_String()
     {
         var validStr = GenerateBigValidStr();
         var result1 = Answer.Check(validStr);
@@ -135,7 +135,7 @@ public class AnswerTest
     private static string GenerateBigValidStr()
     {
         var size = 10_000;
-        var characters = new[] { '(', '[' };
+        char[] characters = ['(', '['];
         var r = new Random();
 
         var sb = new StringBuilder(size);
@@ -209,7 +209,7 @@ public class AnswerTest
     }
 
     [Fact(DisplayName = "No error if more closing than opening (Empty Stack)")]
-    public void Should_Return_False_When_More_Closing_Thant_Opening()
+    public void Should_Return_False_When_More_Closing_Than_Opening()
     {
         var result = Answer.Check("[])");
 
