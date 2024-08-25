@@ -2,7 +2,7 @@
 
 internal class Solution
 {
-    internal static int LuckyMoney(int money, int giftees)
+    public static int LuckyMoney(int money, int giftees)
     {
         throw new NotImplementedException();
     }

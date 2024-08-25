@@ -2,7 +2,7 @@
 
 internal class A
 {
-    internal static int ClosestToZero(int[] ints)
+    public static int ClosestToZero(int[] ints)
     {
         throw new NotImplementedException();
     }
